@@ -11,6 +11,9 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       
@@ -25,7 +28,8 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: book # mdBook 默认把生成结果放在 book 文件夹
+          path: book
 
       - name: Deploy to GitHub Pages
+        id: deployment # 增加 id 以便上面的 url 引用
         uses: actions/deploy-pages@v4
