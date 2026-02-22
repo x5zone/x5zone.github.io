@@ -98,15 +98,18 @@ p, li {
     color: #f0f0f0;
 }
 
-/* 链接 */
+/* 链接 - 浅蓝色，深色背景上清晰可见 */
 a {
-    text-decoration: underline;
-    color: #ffb700;
+    text-decoration: none;
+    color: #61dafb !important;
+    border-bottom: 1px solid rgba(97, 218, 251, 0.3);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
     transition: all 0.25s ease;
 }
 
 a:hover {
-    color: #ffd54f;
+    color: #8be9fd !important;
+    border-bottom-color: rgba(97, 218, 251, 0.8);
 }
 
 /* 引用块 */
@@ -142,6 +145,19 @@ code {
 /* 隐藏侧边栏切换按钮 */
 #sidebar-toggle {
     display: none;
+}
+
+/* 隐藏左侧菜单按钮（汉堡菜单） */
+#menu-toggle,
+#mdbook-sidebar-toggle {
+    display: none !important;
+}
+
+/* 隐藏主题切换按钮（画笔图标） */
+#theme-list,
+#mdbook-theme-list,
+.theme-toggle {
+    display: none !important;
 }
 
 /* 响应式 */

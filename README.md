@@ -20,6 +20,17 @@
   - 📝 刚 mkdir · 用 Rust 重写 Minix 微内核。自己写操作系统，太酷了，也是接下来的主要目标。
 
 ---
+
+## 关于我
+
+- 完成过数据平台的 0-1，完成过 feed 推荐的 0-1（算法 + 后端）。
+- 大中小厂都待过。
+- 一个喜欢 coding 的普通程序员。
+- 目前在学 Rust 和系统编程，觉得挺有意思。
+
+🐙 所有项目开源在 [GitHub](https://github.com/x5zone) · 有问题欢迎提 **Issue**
+
+---
 *Keep it simple, keep it stupid.*
 
 ---
