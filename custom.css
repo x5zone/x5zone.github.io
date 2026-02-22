@@ -101,12 +101,12 @@ p, li {
 /* 链接 */
 a {
     text-decoration: underline;
-    color: #8be9fd;
+    color: #ffb700;
     transition: all 0.25s ease;
 }
 
 a:hover {
-    color: #b0f0ff;
+    color: #ffd54f;
 }
 
 /* 引用块 */
