@@ -22,4 +22,4 @@
 *Keep it simple, keep it stupid.*
 
 ---
-<p align="right">建立于 2026 · 基于 [mdBook](https://rust-lang.github.io/mdBook/) 构建</p>
+<p align="right">建立于 2026 · 基于 <a href="https://rust-lang.github.io/mdBook/">mdBook</a> 构建</p>
