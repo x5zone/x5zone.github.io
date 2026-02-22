@@ -1,0 +1,14 @@
+[book]
+authors = ["x5zone"]
+language = "zh-cn"
+src = "."
+title = "X5Zone's Base"
+
+[output.html]
+# 开启深色模式
+default-theme = "navy"
+preferred-dark-theme = "navy"
+# 允许搜索
+search = true
+# 允许在 GitHub 上编辑
+git-repository-url = "https://github.com/x5zone/x5zone.github.io"
