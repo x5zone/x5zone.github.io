@@ -1,0 +1,117 @@
+/* ==================== 极简风格重置 ==================== */
+
+/* 整体页面背景优化 - 深色主题 */
+html,
+body,
+.page-wrapper,
+.page,
+.sidebar {
+    background: url('../background.png') no-repeat center center fixed !important;
+    background-size: cover !important;
+    background-color: transparent !important;
+}
+
+html {
+    min-height: 100vh;
+}
+
+/* 基础布局 - 浅色半透明背景，淡入淡出无边缘 */
+.content main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.4) 10%,
+        rgba(0, 0, 0, 0.4) 90%,
+        rgba(0, 0, 0, 0.1)
+    );
+    backdrop-filter: blur(2px);
+    box-shadow: none;
+    border-radius: 0;
+    color: #ffffff;
+}
+
+/* 标题 */
+h1 {
+    border-bottom: none;
+    padding-bottom: 0;
+    font-weight: 700;
+    font-size: 2.25rem;
+    margin-bottom: 0.75em;
+    color: #ffffff;
+}
+
+h2, h3 {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+h1 + p {
+    font-size: 1.125rem;
+    color: #e0e0e0;
+    margin-bottom: 2em;
+    font-weight: 400;
+}
+
+p, li {
+    color: #f0f0f0;
+}
+
+/* 链接 */
+a {
+    text-decoration: underline;
+    color: #8be9fd;
+    transition: all 0.25s ease;
+}
+
+a:hover {
+    color: #b0f0ff;
+}
+
+/* 引用块 */
+blockquote {
+    font-style: normal;
+    color: #e0e0e0;
+    border-left: 3px solid rgba(139, 233, 253, 0.5);
+    margin: 2em 0;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+/* 列表 */
+ul {
+    line-height: 1.8;
+    padding-left: 1.5em;
+}
+
+li {
+    margin-bottom: 0.75em;
+}
+
+/* 代码 */
+code {
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 0.9em;
+    background: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+/* 隐藏侧边栏切换按钮 */
+#sidebar-toggle {
+    display: none;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .content main {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+}

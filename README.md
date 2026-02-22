@@ -1,13 +1,25 @@
-# X5Zone's Digital Garden
+# 🌌 乌有之乡
 
-> "Ground Truth on GitHub"
+*Code never lies, sentiments do.*
 
-欢迎来到我的数字花园。辞职一年半后，我决定重新审视底层，重筑基础。
-
-### 当前主要项目：
-- **[rust-sicp-exercises](./rust-sicp-exercises/)**: 使用 Rust 重新实现 SICP 中的练习，带数学推导。
-- **[tech-notes](./tech-notes/)**: 算法、OS、Rust 相关的硬核技术笔记。
-- **[rust4minix](./rust4minix/)**: 正在孵化中的微内核重构计划。
+一个关于 **🦀 Rust**、**💻 SICP**、**🦊 Minix** 的系统编程探索空间。
 
 ---
-*Stay hungry, stay foolish.*
+
+## 正在折腾
+
+- **[SICP in Rust](https://github.com/x5zone/sicp-rust)**
+  - 📝 暂停中 · 用 Rust 刷 SICP，已至第三章第 20 题。封装了一套 crate，让 Rust 写习题像 JS 一样方便。
+
+- **[Tech Notes](https://github.com/x5zone/tech-notes)**
+  - 📝 随缘更新 · 零散技术笔记，Rust、算法、工具技巧等不成体系的知识文档区。
+    - 当前仅有 [Two-Way 字符串匹配算法推导](https://x5zone.github.io/tech-notes/algorithms/twoway_algorithm_notes.html) —— 面向程序员的教程，没有临界分解定理，无需数学背景，从工程视角理解算法本质。
+
+- **[Rust for Minix](https://github.com/x5zone/minix-rs)**
+  - 📝 刚 mkdir · 用 Rust 重写 Minix 微内核。自己写操作系统，太酷了，也是接下来的主要目标。
+
+---
+*Keep it simple, keep it stupid.*
+
+---
+<p align="right">建立于 2026 · 基于 [mdBook](https://rust-lang.github.io/mdBook/) 构建</p>
