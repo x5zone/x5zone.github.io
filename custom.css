@@ -5,14 +5,53 @@ html,
 body,
 .page-wrapper,
 .page,
-.sidebar {
-    background: url('../background.png') no-repeat center center fixed !important;
+.sidebar,
+.menu-bar {
+    background: url('background.png') no-repeat center center fixed !important;
     background-size: cover !important;
     background-color: transparent !important;
 }
 
 html {
     min-height: 100vh;
+}
+
+/* =========================================
+   顶部导航栏透明化
+   ========================================= */
+.menu-bar {
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+.menu-bar .icon-button {
+    color: #ffffff !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.menu-bar .icon-button:hover {
+    color: #8be9fd !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.menu-bar .menu-title {
+    color: #ffffff !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* 侧边栏透明化 */
+.sidebar {
+    border-right: none !important;
+}
+
+.sidebar a {
+    color: #e0e0e0 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.sidebar a:hover {
+    color: #8be9fd !important;
 }
 
 /* 基础布局 - 浅色半透明背景，淡入淡出无边缘 */

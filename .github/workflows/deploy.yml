@@ -25,6 +25,9 @@ jobs:
       - name: Build Book
         run: mdbook build
 
+      - name: Copy assets to book directory
+        run: cp background.png book/
+
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
