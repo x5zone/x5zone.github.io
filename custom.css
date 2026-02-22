@@ -1,12 +1,12 @@
-/* ==================== 极简风格重置 ==================== */
+/* ==================== 极简沉浸式风格 ==================== */
 
-/* 整体页面背景优化 - 深色主题 */
+/* 整体页面背景 */
 html,
 body,
 .page-wrapper,
 .page,
-.sidebar,
-.menu-bar {
+.content,
+.content-wrap {
     background: url('background.png') no-repeat center center fixed !important;
     background-size: cover !important;
     background-color: transparent !important;
@@ -17,44 +17,121 @@ html {
 }
 
 /* =========================================
-   顶部导航栏透明化
+   任务1: 完全隐藏左侧侧边栏
    ========================================= */
-.menu-bar {
-    border-bottom: none !important;
-    box-shadow: none !important;
+.sidebar,
+#sidebar,
+#mdbook-sidebar {
+    display: none !important;
 }
 
-.menu-bar .icon-button {
-    color: #ffffff !important;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+/* 内容区域占满全屏 */
+.page-wrapper {
+    margin-left: 0 !important;
+    width: 100% !important;
 }
 
-.menu-bar .icon-button:hover {
-    color: #8be9fd !important;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
+.content-wrap {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+    padding: 60px 20px !important;
 }
 
-.menu-bar .menu-title {
-    color: #ffffff !important;
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+/* =========================================
+   任务2: 隐藏顶部导航栏所有按钮
+   ========================================= */
+.menu-bar,
+#menu-bar {
+    display: none !important;
 }
 
-/* 侧边栏透明化 */
-.sidebar {
-    border-right: none !important;
+.icon-button,
+#menu-toggle,
+#mdbook-sidebar-toggle,
+#theme-list,
+#mdbook-theme-list,
+.theme-toggle,
+#mdbook-search-toggle {
+    display: none !important;
 }
 
-.sidebar a {
-    color: #e0e0e0 !important;
+/* =========================================
+   任务3: 全局字体优化
+   ========================================= */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif !important;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #ffffff;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
-.sidebar a:hover {
-    color: #8be9fd !important;
+/* 标题字体 */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: #ffffff !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
 }
 
-/* 基础布局 - 浅色半透明背景，淡入淡出无边缘 */
+h1 {
+    border-bottom: none;
+    font-size: 2.25rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h1 + p {
+    font-size: 1.125rem;
+    color: #e0e0e0;
+    margin-bottom: 2em;
+}
+
+p, li {
+    color: #f0f0f0;
+}
+
+/* =========================================
+   链接样式 - React蓝
+   ========================================= */
+a {
+    color: #61dafb !important;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(97, 218, 251, 0.3);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: #8be9fd !important;
+    border-bottom-color: rgba(97, 218, 251, 0.8);
+}
+
+/* =========================================
+   引用块样式
+   ========================================= */
+blockquote {
+    border-left: 4px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 6px;
+    font-style: italic;
+    color: #e0e0e0;
+}
+
+/* =========================================
+   内容区域布局
+   ========================================= */
 .content main {
     max-width: 720px;
     margin: 0 auto;
@@ -72,58 +149,9 @@ html {
     color: #ffffff;
 }
 
-/* 标题 */
-h1 {
-    border-bottom: none;
-    padding-bottom: 0;
-    font-weight: 700;
-    font-size: 2.25rem;
-    margin-bottom: 0.75em;
-    color: #ffffff;
-}
-
-h2, h3 {
-    color: #ffffff;
-    font-weight: 700;
-}
-
-h1 + p {
-    font-size: 1.125rem;
-    color: #e0e0e0;
-    margin-bottom: 2em;
-    font-weight: 400;
-}
-
-p, li {
-    color: #f0f0f0;
-}
-
-/* 链接 - 浅蓝色，深色背景上清晰可见 */
-a {
-    text-decoration: none;
-    color: #61dafb !important;
-    border-bottom: 1px solid rgba(97, 218, 251, 0.3);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
-    transition: all 0.25s ease;
-}
-
-a:hover {
-    color: #8be9fd !important;
-    border-bottom-color: rgba(97, 218, 251, 0.8);
-}
-
-/* 引用块 */
-blockquote {
-    font-style: normal;
-    color: #e0e0e0;
-    border-left: 3px solid rgba(139, 233, 253, 0.5);
-    margin: 2em 0;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
-}
-
-/* 列表 */
+/* =========================================
+   列表样式
+   ========================================= */
 ul {
     line-height: 1.8;
     padding-left: 1.5em;
@@ -133,34 +161,20 @@ li {
     margin-bottom: 0.75em;
 }
 
-/* 代码 */
+/* =========================================
+   代码样式
+   ========================================= */
 code {
     border-radius: 4px;
-    padding: 2px 4px;
+    padding: 2px 6px;
     font-size: 0.9em;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     color: #ffffff;
 }
 
-/* 隐藏侧边栏切换按钮 */
-#sidebar-toggle {
-    display: none;
-}
-
-/* 隐藏左侧菜单按钮（汉堡菜单） */
-#menu-toggle,
-#mdbook-sidebar-toggle {
-    display: none !important;
-}
-
-/* 隐藏主题切换按钮（画笔图标） */
-#theme-list,
-#mdbook-theme-list,
-.theme-toggle {
-    display: none !important;
-}
-
-/* 响应式 */
+/* =========================================
+   响应式
+   ========================================= */
 @media (max-width: 768px) {
     .content main {
         padding: 20px 15px;
